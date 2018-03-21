@@ -59,37 +59,37 @@ table {
     src: url(./css/fonts/Raleway-Medium.ttf);
 }
 
+@font-face {
+    font-family: Cross_Town;
+    src: url(./css/fonts/Cross_Town.ttf);
+}
+
 body {
     font-family: Raleway-Thin;
-    background-image: url('./images/background_img/mountain.jpg');
+    background-image: url('./images/background_img/swell_lines.jpg');
     background-size: 100vw auto;
 }
 
 h1 {
     font-size: 3rem;
-    padding: 1rem;
-    font-family: Raleway-Thin;
+    font-family: Cross_Town;
 }
 
 h2 {
     font-size: 2.5rem;
-    padding: .5rem;
 }
 
 h3 {
     font-size: 2rem;
-    padding: 0.25rem;
 }
 
 h4 {
     font-size: 1.5rem;
-    padding: 0.25rem;
     font-family: Raleway-Medium;
     color: black;
 }
 
 p {
-    padding: .25rem;
     /* font-family: Raleway-Medium; */
 }
 

@@ -10,7 +10,14 @@ export class Header extends React.Component {
     render() {
         return (
           <div className="header-container">
-                <h1>GNARLY NANNIES</h1>
+                <div className="title-container">
+                    <h1>GNARLY NANNIES</h1>
+                    <p>Your child deserves a life of adventure.</p>
+                </div>
+                <div className="nav-container">
+                    <a href="">CITIES</a>
+                    <a href="">OUR STORY</a>
+                </div>
           </div>
         )
     }

@@ -1,0 +1,16 @@
+.filter-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 20vw;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.filter-container h4 {
+    color: white;
+    align-self: center;
+    font-size: 1.25rem;
+    padding: .5rem;
+}
