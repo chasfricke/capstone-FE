@@ -9,9 +9,12 @@ export class Filter extends React.Component {
    
     render() {
         return (
-          <div className="filter-container">
-                <h4>REFINE SEARCH</h4>
-          </div>
+            <div className="filter-container">
+                <div className="filter-title-container">
+                    <h4>REFINE SEARCH</h4>
+                </div>
+                <hr></hr>    
+            </div>
         )
     }
     

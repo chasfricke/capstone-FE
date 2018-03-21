@@ -1,5 +1,5 @@
 .filter-container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     margin-left: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -9,8 +9,22 @@
 }
 
 .filter-container h4 {
-    color: white;
+    color: black;
     align-self: center;
     font-size: 1.25rem;
     padding: .5rem;
+}
+
+.filter-container hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    width: 90%;
+    margin-top: 0;
+}
+
+.filter-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
