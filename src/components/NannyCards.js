@@ -17,14 +17,15 @@ export class NannyCards extends React.Component {
                     </header>
                     <section className="nanny-card-dropdown">
                         <h4>{item.first_name + " " + item.last_name}</h4>
-                        <p>{item.background}</p> 
+                        <p>{item.city + ", " + item.state}</p>
+                        <p>{item.background}</p>
+                        <p>Hourly Rate: ${item.hourly_rate}</p> 
                     </section>
                 </div>
             </li>
         )
     }
    
-
     render() {
         console.log(this.props.nannyData);
         return (
