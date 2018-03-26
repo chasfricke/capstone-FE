@@ -1,22 +1,18 @@
 import React from 'react'
 import '../css/Filter.css'
+import { NannyCards } from './NannyCards'
 
 export class Filter extends React.Component {
 	constructor(props) {
 		super(props)    
 
-		this.state = {
-			surfing: false,
-			kayaking: false,
-			snowboarding: false,
-			mountainbiking: false,
-		}
+		this.state = {};
 	}
 
-
-	
 	render() {
+
 		return (
+			<div>
 			<div className="filter-container">
 				<div className="filter-title-container">
 						<h4>REFINE SEARCH</h4>
@@ -26,31 +22,48 @@ export class Filter extends React.Component {
 					<legend>Water Sports</legend>
 					<div>
 						<input type="checkbox" id="surfing" name="surfing" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.surfing} />
-						<label for="surfing">Surfing</label>
+						<label>Surfing</label>
 					</div>
 					<div>
 						<input type="checkbox" id="kayaking" name="kayaking" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.kayaking}/>
-						<label for="kayaking">Kayaking</label>
+						<label>Kayaking</label>
 					</div>
 				</fieldset>
+				<fieldset>
+				<legend>Mountain Sports</legend>
 					<div>
 						<input type="checkbox" id="snowboarding" name="snowboarding" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.snowboarding}/>
-						<label for="snowboarding">Snowboarding</label>
+						<label>Snowboarding</label>
 					</div>
 					<div>
-						<input type="checkbox" id="mountainbiking" name="mountainbiking" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.mountainbiking}/>
-						<label for="mountainbiking">Mountain Biking</label>
+						<input type="checkbox" id="mountain_biking" name="mountain_biking" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.mountain_biking}/>
+						<label>Mountain Biking</label>
 					</div>
+					<div>
+						<input type="checkbox" id="rock_climbing" name="rock_climbing" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.rock_climbing}/>
+						<label>Rock Climbing</label>
+					</div>
+					<div>
+						<input type="checkbox" id="hiking" name="hiking" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.hiking}/>
+						<label>Hiking</label>
+					</div>
+				</fieldset>
 				<button>Search</button>
 			</div>
+			<NannyCards filtersSelected={this.state} nannyData={this.props.nannyData} />
+		</div>
 		)
 	}
 
+
 	onInputChange(value, name) {
+
 		if (this.state[name] === true) {
-			this.setState( { [name]: false} )
+			this.setState( { [name]: undefined} )
+
 		}else {
 			this.setState( { [name]: true} )
 		}
+
 	}
 }
