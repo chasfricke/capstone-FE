@@ -12,12 +12,12 @@ export class Filter extends React.Component {
 	render() {
 
 		return (
-			<div>
+			<div className="filter-list-container">
 			<div className="filter-container">
 				<div className="filter-title-container">
 						<h4>REFINE SEARCH</h4>
 				</div>
-				<hr></hr>    
+				<hr className="line_1"></hr>    
 				<fieldset>
 					<legend>Water Sports</legend>
 					<div>
@@ -36,6 +36,10 @@ export class Filter extends React.Component {
 						<label>Snowboarding</label>
 					</div>
 					<div>
+						<input type="checkbox" id="skiing" name="skiing" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.skiing}/>
+						<label>Skiing</label>
+					</div>
+					<div>
 						<input type="checkbox" id="mountain_biking" name="mountain_biking" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.mountain_biking}/>
 						<label>Mountain Biking</label>
 					</div>
@@ -48,7 +52,30 @@ export class Filter extends React.Component {
 						<label>Hiking</label>
 					</div>
 				</fieldset>
-				<button>Search</button>
+				<fieldset>
+					<legend>Other</legend>
+					<div>
+						<input type="checkbox" id="skateboarding" name="skateboarding" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.skateboarding}/>
+						<label>Skateboarding</label>
+					</div>
+				</fieldset>
+				<br></br>
+				<hr className="line_2"></hr>
+				<fieldset>
+					<legend>Certifications</legend>
+					<div>
+						<input type="checkbox" id="first_aid" name="first_aid" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.first_aid}/>
+						<label>First-Aid</label>
+					</div>
+					<div>
+						<input type="checkbox" id="cpr" name="cpr" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.cpr}/>
+						<label>CPR</label>
+					</div>
+					<div>
+						<input type="checkbox" id="lifeguard" name="lifeguard" onClick={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.lifeguard}/>
+						<label>Lifeguard</label>
+					</div>
+				</fieldset>
 			</div>
 			<NannyCards filtersSelected={this.state} nannyData={this.props.nannyData} />
 		</div>
@@ -57,13 +84,10 @@ export class Filter extends React.Component {
 
 
 	onInputChange(value, name) {
-
 		if (this.state[name] === true) {
 			this.setState( { [name]: undefined} )
-
-		}else {
+		} else {
 			this.setState( { [name]: true} )
 		}
-
 	}
 }

@@ -16,7 +16,14 @@ export class NannyCards extends React.Component {
             (FT.snowboarding === item.snowboarding) || 
             (FT.mountain_biking === item.mountain_biking) ||
             (FT.hiking === item.hiking) ||
-            (FT.rock_climbing === item.rock_climbing)) 
+            (FT.rock_climbing === item.rock_climbing) ||
+            (FT.skateboarding === item.skateboarding) ||
+            (FT.skiing === item.skiing) ||
+            (FT.first_aid === item.first_aid) ||
+            (FT.cpr === item.cpr) ||
+            (FT.lifeguard === item.lifeguard))
+            
+
         { 
             return (
                 <li>
@@ -41,6 +48,7 @@ export class NannyCards extends React.Component {
         // console.log(this.props.nannyData);
         return (
           <section>
+            <h3>AVAILABLE NANNIES</h3>
                 <ul>
                     {this.props.nannyData.map(this.renderNannyList)}
                 </ul>
