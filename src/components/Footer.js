@@ -2,9 +2,7 @@ import React from 'react'
 import '../css/Footer.css'
 
 export class Footer extends React.Component {
-    constructor(props) {
-        super(props)    
-    }
+    
 
    
     render() {

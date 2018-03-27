@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { NannyCards } from './components/NannyCards'
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
-import { Filter } from './components/Filter'
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Filter } from './components/Filter';
 
 
 class App extends Component {
@@ -34,8 +33,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <main>
-          <Filter />
-          <NannyCards nannyData={this.state.nannyData} />
+          <Filter nannyData={this.state.nannyData} />
         </main>
         <Footer />
       </div>
