@@ -3,6 +3,10 @@ import './App.css';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Filter } from './components/Filter';
+import { SplashPage } from './components/SplashPage';
+import { Locations } from './components/Locations';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 class App extends Component {
@@ -30,13 +34,16 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">
-        <Header />
-        <main>
-          <Filter nannyData={this.state.nannyData} />
-        </main>
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Switch>
+            <Route path="/locations/denver" component={() => (<div><Header/><Filter nannyData={this.state.nannyData} /><Footer/></div>)} /> 
+            <Route path="/locations" component={() => (<div><Header/><Locations/><Footer/></div>)} />
+            <Route path="/" component={() => (<div><Header/><SplashPage/><Footer/></div>)} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+      
     );
   }
 }

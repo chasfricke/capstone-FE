@@ -8,25 +8,27 @@ export class NannyCards extends React.Component {
     }
 
     renderNannyList(item){
+        var FT = this.props.filtersSelected
+        console.log("list rendered")
 
-        var FT = this.props.filtersSelected;
+        if ((FT.surfing === true & FT.surfing === item.surfing) || 
+        (FT.kayaking === true & FT.kayaking === item.kayaking) || 
+        (FT.snowboarding === true & FT.snowboarding === item.snowboarding) ||
+        (FT.mountain_biking === true & FT.mountain_biking === item.mountain_biking) ||
+        (FT.hiking === true & FT.hiking === item.hiking) ||
+        (FT.rock_climbing === true & FT.rock_climbing === item.rock_climbing) ||
+        (FT.skateboarding === true & FT.skateboarding === item.skateboarding) ||
+        (FT.skiing === true & FT.skiing === item.skiing) ||
+        (FT.first_aid === true & FT.first_aid === item.first_aid) ||
+        (FT.cpr === true & FT.cpr === item.cpr) ||
+        (FT.lifeguard === true & FT.lifeguard === item.lifeguard)
 
-        if ((FT.surfing === item.surfing) || 
-            (FT.kayaking === item.kayaking) || 
-            (FT.snowboarding === item.snowboarding) || 
-            (FT.mountain_biking === item.mountain_biking) ||
-            (FT.hiking === item.hiking) ||
-            (FT.rock_climbing === item.rock_climbing) ||
-            (FT.skateboarding === item.skateboarding) ||
-            (FT.skiing === item.skiing) ||
-            (FT.first_aid === item.first_aid) ||
-            (FT.cpr === item.cpr) ||
-            (FT.lifeguard === item.lifeguard))
-            
-
+    
+        )
         { 
+
             return (
-                <li>
+                <li key={item.first_name + item.last_name + item.phone_number} >
                     <div className="nanny-card-container">
                         <header className="nanny-card-header">
                             <img className="nanny-profile-img" src={item.photo_url} alt="profile" />
@@ -45,7 +47,6 @@ export class NannyCards extends React.Component {
     }
    
     render() {
-        // console.log(this.props.nannyData);
         return (
           <section>
             <h3>AVAILABLE NANNIES</h3>
@@ -58,3 +59,14 @@ export class NannyCards extends React.Component {
     
 }
 
+// || 
+//             (FT.kayaking === item.kayaking) || 
+//             (FT.snowboarding === item.snowboarding) || 
+//             (FT.mountain_biking === item.mountain_biking) ||
+//             (FT.hiking === item.hiking) ||
+//             (FT.rock_climbing === item.rock_climbing) ||
+//             (FT.skateboarding === item.skateboarding) ||
+//             (FT.skiing === item.skiing) ||
+//             (FT.first_aid === item.first_aid) ||
+//             (FT.cpr === item.cpr) ||
+//             (FT.lifeguard === item.lifeguard))
