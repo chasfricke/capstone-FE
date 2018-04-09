@@ -1,0 +1,5 @@
+.splash-page-container {
+    background-image: url('../images/background_img/hiking_with_kids.jpg');
+    background-size: 100vw auto; 
+    height: 85vh;
+}
