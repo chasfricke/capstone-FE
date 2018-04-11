@@ -16,7 +16,7 @@ export class Header extends React.Component {
                 <div className="nav-container">
                     <Link to="/locations">CITIES</Link>   
                     <a href="">OUR STORY</a>
-                    <a href="">JOBS</a>
+                    <Link to="/jobs">JOBS</Link>  
                 </div>
           </div>
         )
