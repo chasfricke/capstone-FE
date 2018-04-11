@@ -9,8 +9,7 @@ export class NannyCards extends React.Component {
 
     renderNannyList(item){
         var FT = this.props.filtersSelected
-        console.log("list rendered")
-
+       
         if ((FT.surfing === true & FT.surfing === item.surfing) || 
         (FT.kayaking === true & FT.kayaking === item.kayaking) || 
         (FT.snowboarding === true & FT.snowboarding === item.snowboarding) ||
@@ -23,7 +22,6 @@ export class NannyCards extends React.Component {
         (FT.cpr === true & FT.cpr === item.cpr) ||
         (FT.lifeguard === true & FT.lifeguard === item.lifeguard)
 
-    
         )
         { 
 
@@ -59,14 +57,3 @@ export class NannyCards extends React.Component {
     
 }
 
-// || 
-//             (FT.kayaking === item.kayaking) || 
-//             (FT.snowboarding === item.snowboarding) || 
-//             (FT.mountain_biking === item.mountain_biking) ||
-//             (FT.hiking === item.hiking) ||
-//             (FT.rock_climbing === item.rock_climbing) ||
-//             (FT.skateboarding === item.skateboarding) ||
-//             (FT.skiing === item.skiing) ||
-//             (FT.first_aid === item.first_aid) ||
-//             (FT.cpr === item.cpr) ||
-//             (FT.lifeguard === item.lifeguard))

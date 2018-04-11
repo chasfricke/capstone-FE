@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../css/SplashPage.css'
 
 export class SplashPage extends React.Component {
@@ -6,7 +7,7 @@ export class SplashPage extends React.Component {
     render() {
         return (
           <div className="splash-page-container">
-                <button>ENTER</button>
+                <Link to="/locations"><button>ENTER</button></Link>
           </div>
         )
     }
