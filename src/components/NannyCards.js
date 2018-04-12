@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/NannyCard.css'
+import { Link } from 'react-router-dom';
 
 export class NannyCards extends React.Component {
     constructor(props) {
@@ -20,31 +21,33 @@ export class NannyCards extends React.Component {
         (FT.skiing === true & FT.skiing === item.skiing) ||
         (FT.first_aid === true & FT.first_aid === item.first_aid) ||
         (FT.cpr === true & FT.cpr === item.cpr) ||
-        (FT.lifeguard === true & FT.lifeguard === item.lifeguard)
+				(FT.lifeguard === true & FT.lifeguard === item.lifeguard)
+			){ 
 
-        )
-        { 
-
-            return (
-                <li key={item.first_name + item.last_name + item.phone_number} >
-                    <div className="nanny-card-container">
-                        <header className="nanny-card-header">
-                            <img className="nanny-profile-img" src={item.photo_url} alt="profile" />
-                            <button>MESSAGE</button>
-                        </header>
-                        <section className="nanny-card-dropdown">
-                            <h4>{item.first_name + " " + item.last_name}</h4>
-                            <p>{item.city + ", " + item.state}</p>
-                            <p>{item.background}</p>
-                            <p>Hourly Rate: ${item.hourly_rate}</p> 
-                        </section>
-                    </div>
-                </li>
-            )
-        }   
+				return (
+					<Link to={`/locations/denver/${item.id}`}>
+					<li key={item.id} onClick={() => this.handleClick(item)}>
+						<div className="nanny-card-container">
+							<header className="nanny-card-header">
+								<img className="nanny-profile-img" src={item.photo_url} alt="profile" />
+							</header>
+							<section className="nanny-card-dropdown">
+								<h4>{item.first_name + " " + item.last_name}</h4>
+								<p>{item.city + ", " + item.state}</p>
+								<p>{item.background}</p>
+								<p>Hourly Rate: ${item.hourly_rate}</p> 
+							</section>
+						</div>
+					</li>
+					</Link>
+				)
+			}   
     }
-   
-    render() {
+		handleClick = (item) => {
+		this.setState({item});
+		}   
+
+		render() {
         return (
           <section>
             <h3>AVAILABLE NANNIES</h3>
@@ -56,4 +59,5 @@ export class NannyCards extends React.Component {
     }
     
 }
+
 
