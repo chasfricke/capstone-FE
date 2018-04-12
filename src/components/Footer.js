@@ -5,13 +5,13 @@ export class Footer extends React.Component {
     
 
    
-    render() {
-        return (
-          <div className="footer-container">
-                <span><small>Copyright 2018</small></span>
-          </div>
-        )
-    }
+	render() {
+		return (
+			<div className="footer-container">
+				<span><small>Copyright 2018</small></span>
+			</div>
+		)
+	}
     
 }
 
