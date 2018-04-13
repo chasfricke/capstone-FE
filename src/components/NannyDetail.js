@@ -5,7 +5,7 @@ export class NannyDetail extends React.Component {
   
 	constructor(props) {
 		super(props)    
-		this.state = {};
+		this.state = null;
 	}
 
 	componentDidMount() {
@@ -18,11 +18,14 @@ export class NannyDetail extends React.Component {
 		return fetch(`https://gnarly-nannies.herokuapp.com/nanny_account_info/${id}`)
 		  .then(response => response.json())
 		  .then(data => {
-			this.setState(data.nanny_account_info)
-		})
+			this.setState(data.nanny_account_info)})
 	}
 
+
 	render() {
+		if (this.state === null) {
+			return <div>Loading...</div>
+		}
 		return (
 			<div>
 				<Link to="/locations/denver">
@@ -35,6 +38,7 @@ export class NannyDetail extends React.Component {
 				<p>Hourly Rate: ${this.state.hourly_rate}</p>
 				<p>Background: {this.state.background}</p>
 			</div>
+			
 		)
 	}
     
