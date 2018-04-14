@@ -55,7 +55,7 @@ export class NannyDetail extends React.Component {
 								<p>Experience: {this.state.years_experience} years</p>
 							</div>
 							<div className="skills-list">
-								<h4>Trips Offered:</h4>
+								<h4>Trips Offered</h4>
 								<ul>
 									{this.renderSports()}
 								</ul>
