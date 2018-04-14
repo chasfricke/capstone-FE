@@ -1,9 +1,9 @@
 .nanny-card-container {
     border-radius: 6px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    padding: 1rem;
+    padding: 0.5rem;
     width: 75vw;
-    margin: 1rem;
+    margin-left: 1rem;
     display: flex;
     flex-direction: row;
     background-color: rgba(255, 255, 255, 0.75);
@@ -16,22 +16,21 @@
 }
 
 .nanny-profile-img {
-    height: 100px;
-    width: auto;
+    height: 150px;
+    width: 150px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    margin: 0.25rem;
 }
 
-.nanny-card-dropdown {
+.nanny-info {
     display: flex;
     flex-direction: column;
     align-items: left;
+    margin-left: 0.5rem;
 }
   
 button {
     width: 100px;
-    margin: 0.25rem;
-    padding: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 h3 {
