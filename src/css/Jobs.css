@@ -4,3 +4,41 @@
     margin-left: 1rem;
 }
 
+.job-form input {
+    margin-bottom: 0.5rem;
+}
+
+.text-box {
+    margin-right: 3rem;
+}
+
+.form-section {
+    border: solid lightgray;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-width: 1px;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-me textarea {
+    border: solid lightgray;
+    border-width: 1px;
+}
+
+.job-form button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.job-form hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
