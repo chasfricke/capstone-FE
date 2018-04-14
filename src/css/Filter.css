@@ -21,7 +21,11 @@
     color: black;
     align-self: center;
     font-size: 1.25rem;
-    padding: .5rem;
+    padding-top: .5rem; 
+}
+
+.show-all-checkbox {
+    margin-left: 1rem;
 }
 
 .line_1 {

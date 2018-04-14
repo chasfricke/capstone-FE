@@ -30,7 +30,7 @@ export class Filter extends React.Component {
 				<div className="filter-title-container">
 						<h4>REFINE SEARCH</h4>
 				</div>
-				<div>
+				<div className="show-all-checkbox">
 					<input type="checkbox" id="show_all" name="show_all" checked={this.state.show_all} onChange={event => this.showAll()} />
 					<label>Show All</label>
 				</div>
@@ -110,7 +110,6 @@ export class Filter extends React.Component {
 	}
 
 	showAll() {
-		console.log("Show All")
 		if (this.state.show_all === true) {
 			this.setState( {
 				show_all: false,

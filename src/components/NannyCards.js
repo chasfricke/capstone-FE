@@ -21,27 +21,26 @@ export class NannyCards extends React.Component {
         (FT.skiing === true & FT.skiing === item.skiing) ||
         (FT.first_aid === true & FT.first_aid === item.first_aid) ||
         (FT.cpr === true & FT.cpr === item.cpr) ||
-				(FT.lifeguard === true & FT.lifeguard === item.lifeguard)
-			){ 
+        (FT.lifeguard === true & FT.lifeguard === item.lifeguard)){ 
 
-				return (
-					<Link to={`/locations/denver/${item.id}`}>
-					<li key={item.id} onClick={() => this.handleClick(item)}>
-						<div className="nanny-card-container">
-							<header className="nanny-card-header">
-								<img className="nanny-profile-img" src={item.photo_url} alt="profile" />
-							</header>
-							<section className="nanny-card-dropdown">
-								<h4>{item.first_name + " " + item.last_name}</h4>
-								<p>{item.city + ", " + item.state}</p>
-								<p>{item.background}</p>
-								<p>Hourly Rate: ${item.hourly_rate}</p> 
-							</section>
-						</div>
-					</li>
-					</Link>
-				)
-			}   
+            return (
+                <Link to={`/locations/denver/${item.id}`}>
+                <li key={item.id} onClick={() => this.handleClick(item)}>
+                    <div className="nanny-card-container">
+                        <header className="nanny-card-header">
+                            <img className="nanny-profile-img" src={item.photo_url} alt="profile" />
+                        </header>
+                        <section className="nanny-info">
+                            <h4>{item.first_name + " " + item.last_name}</h4>
+                            <p>{item.city + ", " + item.state}</p>
+                            <p>{item.background}</p>
+                            <p>Hourly Rate: ${item.hourly_rate}</p> 
+                        </section>
+                    </div>
+                </li>
+                </Link>
+            )
+        }   
     }
 		handleClick = (item) => {
 		this.setState({item});
