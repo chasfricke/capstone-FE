@@ -63,3 +63,29 @@
     flex-direction: row;
     align-items: center;
 }
+
+.nanny-email-form {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: auto;
+    margin: 1rem;
+    width: 50vw;
+}
+
+.nanny-email-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nanny-email-input-container input{
+    margin-bottom: 0.5rem;
+    width: 20rem;
+}
+
+.nanny-email-input-container textarea {
+    height: 10em;
+    margin-bottom: 0.5rem;
+    border: solid lightgray;
+    border-width: 1px;
+}
+

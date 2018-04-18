@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../css/Locations.css';
 
 export class Locations extends React.Component {
     
 	render() {
 		return (
-			<div className="locations-List">
+			<div className="locations-list">
 				<h3>Colorado</h3>
 				<ul>
-				<Link to="/locations/denver">Denver</Link>
+					<Link className="locations-link" to="/locations/denver">Denver</Link>
 					<li>Boulder (coming soon!)</li>
 					<li>Golden (coming soon!)</li>
 					<li>Colorado Springs (coming soon!)</li>

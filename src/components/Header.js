@@ -11,7 +11,6 @@ export class Header extends React.Component {
           <div className="header-container">
                 <div className="title-container">
                     <Link to="/"><h1>GNARLY NANNIES</h1></Link>
-                    <p>Your child deserves a life of adventure.</p>
                 </div>
                 <div className="nav-container">
                     <Link to="/locations">CITIES</Link>   

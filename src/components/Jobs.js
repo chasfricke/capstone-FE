@@ -18,16 +18,15 @@ export class JobsForm extends React.Component {
 	}
 
 	addNannyFormData = data => {
-		console.log("fetch start")
 		fetch('https://gnarly-nannies.herokuapp.com/nanny_account_info', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
+      	method: 'POST',
+      	body: JSON.stringify(data),
+      	headers: new Headers({
+        	'Content-Type': 'application/json'
+      	})
     })
-      .then(res => res.json())
-      .catch(error => console.error('Error:', error))
+      	.then(res => res.json())
+      	.catch(error => console.error('Error:', error))
 	}
 
 	handleInputChange(event) {
