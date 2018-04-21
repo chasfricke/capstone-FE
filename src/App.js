@@ -7,6 +7,7 @@ import { SplashPage } from './components/SplashPage';
 import { Locations } from './components/Locations';
 import { JobsForm } from './components/Jobs';
 import { NannyDetail } from './components/NannyDetail';
+import { Login } from './components/Login';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -44,6 +45,7 @@ class App extends Component {
             <Route path="/locations/denver" component={() => (<div><Header/><Filter nannyData={this.state.nannyData} /><Footer/></div>)} /> 
             <Route path="/jobs" component={() => (<div><Header/><JobsForm/><Footer/></div>)} />
             <Route path="/locations" component={() => (<div><Header/><Locations/><Footer/></div>)} />
+            <Route path="/login" component={() => (<div><Header/><Login/><Footer/></div>)} />
             <Route path="/" component={() => (<div><Header/><SplashPage/><Footer/></div>)} />
           </Switch>
         </div>

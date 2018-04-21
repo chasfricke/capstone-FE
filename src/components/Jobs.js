@@ -39,8 +39,8 @@ export class JobsForm extends React.Component {
 	}
 
 	submitHandler(event) {
-    event.preventDefault();
-}
+    	event.preventDefault();
+	}
 
 	render() {
 		return (
