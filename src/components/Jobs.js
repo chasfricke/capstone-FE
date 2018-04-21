@@ -42,6 +42,14 @@ export class JobsForm extends React.Component {
     	event.preventDefault();
 	}
 
+	onInputChange(value, name) {
+		if (this.state[name] === true) {
+			this.setState( { [name]: false} )
+		} else {
+			this.setState( { [name]: true} )
+		}
+	}
+
 	render() {
 		return (
 		<div>
@@ -88,6 +96,10 @@ export class JobsForm extends React.Component {
 					<label>Gender</label>
 					<input type="text" className="text-box" name="gender" value={this.state.gender} onChange={this.handleInputChange} />
 				</div>
+				<div>
+					<label>Photo URL</label>
+					<input type="text" className="text-box" name="photo_url" size="50" value={this.state.photo_url} onChange={this.handleInputChange} />
+				</div>
 				<div className="about-me">
 					<label>About Me</label>
 					<textarea className="text-box" rows="10" cols="50" name="background" value={this.state.background} onChange={this.handleInputChange}></textarea>
@@ -108,35 +120,35 @@ export class JobsForm extends React.Component {
 			<div className="form-section">
 				<h4>I'd Like To Lead The Following Trips</h4>
 				<div>
-					<input type="checkbox" name="surfing" value={this.state.surfing} onChange={this.handleInputChange} />
+					<input type="checkbox" name="surfing" checked={this.state.surfing} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>Surfing</label>
 				</div>
 				<div>
-					<input type="checkbox" name="kayaking" value={this.state.kayaking} onChange={this.handleInputChange} />
+					<input type="checkbox" name="kayaking" checked={this.state.kayaking} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>Kayaking</label>	
 				</div>
 				<div>
-					<input type="checkbox" name="rock_climbing" value={this.state.rock_climbing} onChange={this.handleInputChange} />
+					<input type="checkbox" name="rock_climbing" checked={this.state.rock_climbing} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>Rock Climbing</label>
 				</div>
 				<div>
-					<input type="checkbox" name="skateboarding" value={this.state.skateboarding} onChange={this.handleInputChange} />
+					<input type="checkbox" name="skateboarding" checked={this.state.skateboarding} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>Skateboarding</label>
 				</div>
 				<div>
-					<input type="checkbox" name="hiking" value={this.state.hiking} onChange={this.handleInputChange} />
+					<input type="checkbox" name="hiking" checked={this.state.hiking} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>Hiking</label>
 				</div>
 				<div>
-					<input type="checkbox" name="mountain_biking" value={this.state.mountain_biking} onChange={this.handleInputChange} />
+					<input type="checkbox" name="mountain_biking" checked={this.state.mountain_biking} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>Mountain Biking</label>
 				</div>
 				<div>
-					<input type="checkbox" name="skiing" value={this.state.skiing} onChange={this.handleInputChange} />
+					<input type="checkbox" name="skiing" checked={this.state.skiing} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>Skiing</label>
 				</div>
 				<div>
-					<input type="checkbox" name="snowboarding" value={this.state.snowboarding} onChange={this.handleInputChange} />
+					<input type="checkbox" name="snowboarding" checked={this.state.snowboarding} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>Snowboarding</label>
 				</div>
 			</div>
@@ -152,15 +164,15 @@ export class JobsForm extends React.Component {
 				</div>
 				<hr />
 				<div>
-					<input type="checkbox" name="first_aid" value={this.state.first_aid} onChange={this.handleInputChange} />
+					<input type="checkbox" name="first_aid" checked={this.state.first_aid} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>First-Aid</label>
 				</div>
 				<div>
-					<input type="checkbox" name="cpr" value={this.state.cpr} onChange={this.handleInputChange} />	
+					<input type="checkbox" name="cpr" checked={this.state.cpr} onChange={event => this.onInputChange(event.target.value, event.target.name)} />	
 					<label>CPR</label>
 				</div>
 				<div>
-					<input type="checkbox" name="lifeguard" value={this.state.lifeguard} onChange={this.handleInputChange} />
+					<input type="checkbox" name="lifeguard" checked={this.state.lifeguard} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
 					<label>Lifeguard</label>
 				</div>
 				<div>
