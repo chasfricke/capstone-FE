@@ -13,6 +13,21 @@
     padding-top: 0.5rem;
 }
 
+.header-link {
+    padding: 0.2rem;
+    border-radius: 3px 3px 3px 3px;
+}
+
+/* .link-container:hover {
+    background-color: black;
+} */
+
+.header-link:hover {
+    /* font-size: 1.05rem; */
+    color: white;
+    background-color: black;
+}
+
 a {
     margin-right: 2rem;
     color: black;
@@ -22,6 +37,8 @@ a:link {
     text-decoration: none;
 }
 
-a:hover {
-    font-weight: bolder;
+
+
+.title-container h1:hover {
+    font-size: 3.025rem; 
 }
