@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../css/NannyDetail.css'
-import check from '../images/checked.png'
+import checkIcon from '../images/x_check_icons/check-circle.png'
+import xIcon from '../images/x_check_icons/x-circle.png'
 
 export class NannyDetail extends React.Component { 
 	constructor(props) {
@@ -30,13 +31,38 @@ export class NannyDetail extends React.Component {
 	renderSports = () => {
 		const sports = ['surfing', 'kayaking', 'rock_climbing', 'skateboarding', 'hiking', 'mountain_biking', 'skiing', 'snowboarding']		
 		const results = sports.filter(sport => this.state.nannyData[sport] === true) 
-		const resultListItem = results.map(result => <li key={result} className="check-skill-container"><img className="check" src={check} alt="check"/>{result}</li>)
+		const resultListItem = results.map(result => <li key={result} className="check-skill-container"><img className="check-icon" src={checkIcon} alt="yes"/>{result}</li>)
 		return (
 			<ul>
 				{resultListItem}
 			</ul>
 		)	
 	}
+
+	renderSkills = () => {
+		const skills = ['first_aid', 'cpr', 'lifeguard']
+		const skillsList = skills.map((skill) => {
+			
+			if (this.state.nannyData[skill]) {
+				console.log(skill + ": yes")
+				return <li key={skill}><img src={checkIcon} alt="yes" className="check-icon" />{skill}</li>
+			} else {
+				console.log(skill + ": no")
+				return <li key={skill}><img src={xIcon} alt="yes" className="x-icon" />{skill}</li>
+			}
+
+		}) 
+		console.log("return")
+		return (
+			<ul>
+				{skillsList}
+			</ul>
+				
+		)
+	}
+
+
+
 
 	handleChange = e => {
 		this.setState({[e.target.name]: e.target.value})
@@ -84,6 +110,13 @@ export class NannyDetail extends React.Component {
 								<h4>Trips Offered</h4>
 								<ul>
 									{this.renderSports()}
+								</ul>
+							</div>
+							<div className="skills-list">
+								<h4>Skills</h4>
+								<p>Education: {this.state.nannyData.education}</p>
+								<ul>
+									{this.renderSkills()}
 								</ul>
 							</div>
 						</div>

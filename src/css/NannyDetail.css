@@ -37,10 +37,16 @@
     
 }
 
-.check {
-    height: 1rem;
+.check-icon {
+    height: 0.8rem;
     margin-right: 0.25rem;
-    margin-left: 0.5rem;
+    
+}
+
+.x-icon {
+    height: 0.8rem;
+    margin-right: 0.25rem;
+    
 }
 
 .skills-list {
