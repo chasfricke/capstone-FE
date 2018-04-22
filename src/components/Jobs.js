@@ -13,8 +13,10 @@ export class JobsForm extends React.Component {
 	
 	onSubmit = event => {
 		event.preventDefault()
+		window.scroll(0,0)
 		const data = this.state;
 		this.addNannyFormData(data);
+		this.setState({"submit": "Application submitted!"})
 	}
 
 	addNannyFormData = data => {
@@ -53,6 +55,7 @@ export class JobsForm extends React.Component {
 	render() {
 		return (
 		<div>
+		<h3 className="submit-success">{this.state.submit}</h3>
 		<h3>Nanny Application</h3>
 		<form className="job-form" onSubmit={this.submitHandler}>
 			<div className="form-section">	
@@ -201,9 +204,7 @@ export class JobsForm extends React.Component {
 					<input type="text" className="text-box" name="car_year" value={this.state.car_year} onChange={this.handleInputChange} />
 				</div>
 			</div>
-				<Link to="/locations/denver" >
-					<button onClick={this.onSubmit} >Submit</button>
-				</Link>
+			<button className="job-submit-button" onClick={this.onSubmit}>Submit</button>
 		</form>
 		</div>
 		)
