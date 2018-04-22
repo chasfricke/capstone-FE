@@ -46,7 +46,7 @@ class App extends Component {
             <Route path="/jobs" component={() => (<div><Header/><JobsForm/><Footer/></div>)} />
             <Route path="/locations" component={() => (<div><Header/><Locations/><Footer/></div>)} />
             <Route path="/login" component={() => (<div><Header/><Login/><Footer/></div>)} />
-            <Route path="/" component={() => (<div><Header/><SplashPage/><Footer/></div>)} />
+            <Route path="/" component={() => (<div className="splash-container"><Header/><SplashPage/><Footer/></div>)} />
           </Switch>
         </div>
       </BrowserRouter>

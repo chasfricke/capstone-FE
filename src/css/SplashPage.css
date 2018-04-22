@@ -1,7 +1,6 @@
 .splash-page-container {
-    background-image: url('../images/background_img/hiking_with_kids.jpg');
     background-size: 100vw auto; 
-    height: 85vh;
+    height: 86vh;
 }
 
 .splash-page-container {
@@ -9,5 +8,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
+.tagline {
+    background: black;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    color: white;
+    font-size: 3rem;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);   
+}
