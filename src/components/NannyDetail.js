@@ -50,18 +50,20 @@ export class NannyDetail extends React.Component {
 				console.log(skill + ": no")
 				return <li key={skill}><img src={xIcon} alt="yes" className="x-icon" />{skill}</li>
 			}
-
-		}) 
-		console.log("return")
+		})  
 		return (
 			<ul>
 				{skillsList}
-			</ul>
-				
+			</ul>			
 		)
 	}
 
-
+	renderOtherCerts = () => {
+		if (this.state.nannyData.other_certs !== "") {
+			console.log("other certs")
+			return <p>Other: {this.state.nannyData.other_certs}</p>
+		} 
+	}
 
 
 	handleChange = e => {
@@ -113,11 +115,19 @@ export class NannyDetail extends React.Component {
 								</ul>
 							</div>
 							<div className="skills-list">
-								<h4>Skills</h4>
-								<p>Education: {this.state.nannyData.education}</p>
+								<h4>Training</h4>
 								<ul>
 									{this.renderSkills()}
 								</ul>
+								<div className="other-certs-container">{this.renderOtherCerts()}</div>
+								<hr/>
+								<p>Education: {this.state.nannyData.education}</p>
+							</div>
+							<div className="skills-list">
+								<h4>Car Info</h4>
+								<p>Make: {this.state.nannyData.car_make}</p>
+								<p>Model: {this.state.nannyData.car_model}</p>
+								<p>Year: {this.state.nannyData.car_year}</p>
 							</div>
 						</div>
 						<div className="background">
@@ -128,6 +138,8 @@ export class NannyDetail extends React.Component {
 				</div>
 			</div>
 			
+			{/* Email Form */}
+
 			<form onSubmit={this.handleSubmit} className="nanny-email-form">
 			<h4>Email {this.state.nannyData.first_name}</h4>
 				<div className = "nanny-email-input-container">

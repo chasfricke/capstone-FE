@@ -3,8 +3,8 @@
 }
 
 .nanny-detail-img {
-    height: 200px !important;
-    width: 200px !important;
+    height: 300px !important;
+    width: 300px !important;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);   
 }
 
@@ -39,12 +39,14 @@
 
 .check-icon {
     height: 0.8rem;
+    width: auto;
     margin-right: 0.25rem;
     
 }
 
 .x-icon {
     height: 0.8rem;
+    width: auto;
     margin-right: 0.25rem;
     
 }
@@ -53,6 +55,7 @@
     margin-left: 1rem;
     padding-left: 1rem;
     border-left: 1px solid lightgray;
+    max-width: 20rem;
     
 }
 
@@ -62,7 +65,12 @@
 }
 
 
-
+.detail-container hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid lightgray;
+    
+}
 
 .check-skill-container {
     display: flex;
@@ -95,3 +103,6 @@
     border-width: 1px;
 }
 
+.other-certs-container {
+    margin-top: 0.5rem;
+}
