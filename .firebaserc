@@ -1,5 +1,6 @@
 {
   "projects": {
-    "post-build": "gnarly-nannies"
+    "post-build": "gnarly-nannies",
+    "update v2": "gnarly-nannies"
   }
 }
