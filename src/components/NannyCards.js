@@ -49,7 +49,6 @@ export class NannyCards extends React.Component {
 		render() {
         return (
           <section>
-            <h3>AVAILABLE NANNIES</h3>
                 <ul>
                     {this.props.nannyData.map(this.renderNannyList)}
                 </ul>

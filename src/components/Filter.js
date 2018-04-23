@@ -25,6 +25,8 @@ export class Filter extends React.Component {
 	render() {
 
 		return (
+			<div className="filter-title-nannies-container">
+				<h3 className="nannies-title">DENVER NANNIES</h3>
 			<div className="filter-list-container">
 			<div className="filter-container">
 				<div className="filter-title-container">
@@ -96,6 +98,7 @@ export class Filter extends React.Component {
 				</fieldset>
 			</div>
 			<NannyCards filtersSelected={this.state} nannyData={this.props.nannyData} />
+		</div>
 		</div>
 		)
 	}

@@ -1,24 +1,44 @@
+.filter-title-nannies-container {
+    padding-top: 2rem;
+}
+
+.nannies-title {
+    padding: 1rem;
+    background-color:rgba(255, 255, 255, 0.90);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: rgb(45, 45, 45);
+}
+
 .filter-list-container {
     display: flex;
     flex-direction: row;
-
 }
 
 .filter-container {
-    background-color: rgba(255, 255, 255, 0.75);
-    margin-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.90);
+    margin-left: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    width: 13rem;
-    /* height: 50vh; */
+    /* width: 13rem; */
+    height: 50vh;
     border-radius: 6px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 0.75rem;
+    color: rgb(45, 45, 45);
     
 }
 
+.filter-container h3 {
+    color: rgb(45, 45, 45);
+}
+
 .filter-container h4 {
-    color: black;
+    color: rgb(45, 45, 45);
     align-self: center;
     font-size: 1.25rem;
     padding-top: .5rem; 
@@ -33,7 +53,7 @@
     height: 1px;
     background: #333;
     width: 90%;
-    margin-top: 0;
+    margin-top: 0.5rem;
 }
 
 .filter-title-container {

@@ -54,9 +54,10 @@ export class JobsForm extends React.Component {
 
 	render() {
 		return (
-		<div>
+		<div className="job-form-padding">
+		<div className="job-form-container">
 		<h3 className="submit-success">{this.state.submit}</h3>
-		<h3>Nanny Application</h3>
+		<h3>NANNY APPLICATION</h3>
 		<form className="job-form" onSubmit={this.submitHandler}>
 			<div className="form-section">	
 				<h4>Login</h4>
@@ -206,6 +207,7 @@ export class JobsForm extends React.Component {
 			</div>
 			<button className="job-submit-button" onClick={this.onSubmit}>Submit</button>
 		</form>
+		</div>
 		</div>
 		)
 	} 

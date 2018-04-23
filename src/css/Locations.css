@@ -1,16 +1,32 @@
+.locations-list-container{
+    padding-top: 2rem;
+}
+
 .locations-list {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    background-color:rgba(255, 255, 255, 0.90);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: rgb(45, 45, 45);
+    
+}
+
+.location-container {
+    padding: 1rem;
+}
+
+.location-container ul{
+   
 }
 
 .locations-list li{
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
+    padding-top: 0.4rem;
 }
 
 .locations-link {
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
+    font-weight: bold;
 }
 
-.locations-link:hover {
-    font-weight: boldest;
-}

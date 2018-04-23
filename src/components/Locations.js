@@ -6,21 +6,27 @@ export class Locations extends React.Component {
     
 	render() {
 		return (
-			<div className="locations-list">
-				<h3>Colorado</h3>
-				<ul>
-					<Link className="locations-link" to="/locations/denver">Denver</Link>
-					<li>Boulder (coming soon!)</li>
-					<li>Golden (coming soon!)</li>
-					<li>Colorado Springs (coming soon!)</li>
-				</ul>
-				
-				<h3>California</h3>
-				<ul>
-					<li>San Diego (coming soon!)</li>
-					<li>Los Angeles (coming soon!)</li>
-					<li>San Francisco (coming soon!)</li>
-				</ul>
+			<div className="locations-list-container">
+				<div className="locations-list">
+					<div className="location-container">
+						<h3>CITIES</h3>
+						<hr/>
+						<h4>Colorado</h4>
+						<ul>
+							<Link to="/locations/denver"><span className="locations-link">Denver</span></Link>
+							<li>Boulder (coming soon!)</li>
+							<li>Golden (coming soon!)</li>
+							<li>Colorado Springs (coming soon!)</li>
+						</ul>
+					</div>
+					<div className="location-container">
+						<h4>California</h4>
+						<ul>
+							<li>San Diego (coming soon!)</li>
+							<li>San Francisco (coming soon!)</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		)
 	}  

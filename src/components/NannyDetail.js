@@ -93,7 +93,7 @@ export class NannyDetail extends React.Component {
 			return <div>Loading...</div>
 		}
 		return (
-			<div>
+			<div className="detail-form-container">
 			<div className="detail-container">
 				<Link to="/locations/denver" >
 					<button className="back-button">Back</button>
@@ -139,7 +139,7 @@ export class NannyDetail extends React.Component {
 			</div>
 			
 			{/* Email Form */}
-
+			<div>
 			<form onSubmit={this.handleSubmit} className="nanny-email-form">
 			<h4>Email {this.state.nannyData.first_name}</h4>
 				<div className = "nanny-email-input-container">
@@ -171,6 +171,7 @@ export class NannyDetail extends React.Component {
 				</div>
 				<button className="email-submit-button">Send</button>
 			</form>
+			</div>
 			</div>
 			
 		)

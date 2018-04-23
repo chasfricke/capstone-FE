@@ -1,3 +1,22 @@
+.job-form-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.job-form-container {
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    width: calc(100vw - 5rem);
+    margin-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: rgb(45, 45, 45);
+    padding: 1rem;
+}
+
+.job-form-container h3 {
+    padding-left: 1rem;
+}
+
 .job-form {
     display: flex;
     flex-direction: column;
@@ -36,6 +55,7 @@
 .job-submit-button{
     margin-top: 1rem;
     margin-bottom: 1rem;
+    width: 5rem;
 }
 
 .job-form hr {
