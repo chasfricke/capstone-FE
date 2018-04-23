@@ -17,5 +17,8 @@ html {
 .site-content {
   background-image: url("./images/background_img/boys_bikes_muscles.jpg");
   min-height: 100%;
+  background-attachment: fixed;
+  background-position: center; 
+  background-repeat: no-repeat;
 }
 

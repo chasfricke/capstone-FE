@@ -8,16 +8,11 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    color: rgb(45, 45, 45);
-    
+    color: rgb(45, 45, 45);   
 }
 
 .location-container {
     padding: 1rem;
-}
-
-.location-container ul{
-   
 }
 
 .locations-list li{
@@ -26,7 +21,15 @@
 }
 
 .locations-link {
-    padding-left: 1.25rem;
+    margin-left: 1rem;
     font-weight: bold;
+    padding-right: 1rem;
+
+    padding: 0.2rem;
+    border-radius: 3px 3px 3px 3px;
 }
 
+.locations-link:hover {
+    background-color: black;
+    color: white;
+}

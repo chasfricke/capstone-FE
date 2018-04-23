@@ -34,7 +34,7 @@
 }
 
 .form-section {
-    border: solid lightgray;
+    border: solid gainsboro;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     border-width: 1px;
     margin-top: 1rem;
@@ -48,7 +48,7 @@
 }
 
 .about-me textarea {
-    border: solid lightgray;
+    border: solid gainsboro;
     border-width: 1px;
 }
 

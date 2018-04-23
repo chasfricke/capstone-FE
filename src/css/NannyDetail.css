@@ -7,8 +7,8 @@
     border-radius: 6px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
     width: calc(100vw - 5rem);
-    margin-left: 1rem;
-    background-color: rgba(255, 255, 255, 0.95);
+    margin-left: 5rem;
+    background-color: rgba(255, 255, 255, 0.99);
     color: rgb(45, 45, 45);
     padding: 1rem;
 }
@@ -43,6 +43,8 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
     margin-bottom: 1rem;
+    border: solid gainsboro;
+    border-width: 1px;
 }
 
 .basic-info-container {
@@ -77,6 +79,8 @@
 .background {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
+    border: solid gainsboro;
+    border-width: 1px;
 }
 
 
@@ -104,7 +108,7 @@
     border-radius: 6px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
     margin-left: 1rem;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.99);
     color: rgb(45, 45, 45);
 }
 
@@ -121,10 +125,15 @@
 .nanny-email-input-container textarea {
     height: 10em;
     margin-bottom: 0.5rem;
-    border: solid lightgray;
+    border: solid gainsboro;
     border-width: 1px;
 }
 
 .other-certs-container {
     margin-top: 0.5rem;
+}
+
+.nanny-email-input-container input {
+    border: solid gainsboro;
+    border-width: 1px;
 }
