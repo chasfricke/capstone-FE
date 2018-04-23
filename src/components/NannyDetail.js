@@ -44,10 +44,8 @@ export class NannyDetail extends React.Component {
 		const skillsList = skills.map((skill) => {
 			
 			if (this.state.nannyData[skill]) {
-				console.log(skill + ": yes")
 				return <li key={skill}><img src={checkIcon} alt="yes" className="check-icon" />{skill}</li>
 			} else {
-				console.log(skill + ": no")
 				return <li key={skill}><img src={xIcon} alt="yes" className="x-icon" />{skill}</li>
 			}
 		})  
@@ -60,7 +58,6 @@ export class NannyDetail extends React.Component {
 
 	renderOtherCerts = () => {
 		if (this.state.nannyData.other_certs !== "") {
-			console.log("other certs")
 			return <p>Other: {this.state.nannyData.other_certs}</p>
 		} 
 	}
@@ -74,10 +71,9 @@ export class NannyDetail extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault()
-		console.log("submit")
-		console.log(this.state)
-
-		fetch('http://localhost:8080/api/form', {
+		window.scroll(0,0)
+		this.setState({"submit": "Email sent!"})
+		fetch('https://gnarly-nannies.herokuapp.com/api/form', {
 			method: 'POST',
 			body: JSON.stringify(this.state),
 			headers: new Headers({
@@ -98,6 +94,7 @@ export class NannyDetail extends React.Component {
 				<Link to="/locations/denver" >
 					<button className="back-button">Back</button>
 				</Link>
+				<h4 className="submit-success">{this.state.submit}</h4>
 				<div className="nanny-detail-main">
 					<img className="nanny-detail-img" src={this.state.nannyData.photo_url} alt="profile img"/>
 					<div className="basic-info-container">

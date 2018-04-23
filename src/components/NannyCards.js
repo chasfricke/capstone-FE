@@ -24,7 +24,7 @@ export class NannyCards extends React.Component {
         (FT.lifeguard === true & FT.lifeguard === item.lifeguard)){ 
 
             return (
-                <Link to={`/locations/denver/${item.id}`}>
+                <Link key={item.id} to={`/locations/denver/${item.id}`}>
                 <li key={item.id} onClick={() => this.handleClick(item)}>
                     <div className="nanny-card-container">
                         <header className="nanny-card-header">
@@ -43,7 +43,8 @@ export class NannyCards extends React.Component {
         }   
     }
 		handleClick = (item) => {
-		this.setState({item});
+        this.setState({item});
+        window.scroll(0,0);
 		}   
 
 		render() {

@@ -23,4 +23,11 @@
     flex-direction: column;
     justify-content: center;
     color: white;
+    padding: 0.2rem;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.jobs-link:hover {
+    color: black;
+    background-color: white;
 }

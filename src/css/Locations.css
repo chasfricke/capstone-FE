@@ -3,11 +3,11 @@
 }
 
 .locations-list {
-    background-color:rgba(255, 255, 255, 0.90);
+    background-color:rgba(255, 255, 255, 0.98);
     border-radius: 6px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     color: rgb(45, 45, 45);   
 }
 

@@ -12,8 +12,6 @@ export class Login extends React.Component {
 onLoginSubmit = event => {
 	event.preventDefault()
 	const data = this.state
-	
-	console.log(data)
 	fetch('http://localhost:8080/login', {
 		method: 'POST',
 		body: JSON.stringify(data),
