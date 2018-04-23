@@ -1,17 +1,20 @@
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex: 1;
+.footer {
+  clear: both;
+  position: relative;
+  z-index: 10;
+  height: 3rem;
+  margin-top: -3rem;
 }
 
-.App {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  
-  .splash-container {
-    background-image: url('./images/background_img/boys_bikes_muscles.jpg');
-  }
- 
+.site-body {
+  min-height: calc(100vh - 3rem);
+}
+
+html {
+  margin: 0;
+}
+
+.site-content {
+  background-image: url("./images/background_img/boys_bikes_muscles.jpg");
+  min-height: 100%;
+}

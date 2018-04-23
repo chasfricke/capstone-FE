@@ -1,11 +1,16 @@
 .locations-list {
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 .locations-list li{
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 .locations-link {
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.locations-link:hover {
+    font-weight: boldest;
 }

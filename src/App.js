@@ -38,18 +38,28 @@ class App extends Component {
 			return <div>Loading...</div>
 		}
     return (
-      <BrowserRouter>
-        <div className="App">
-          <Switch>
-            <Route path="/locations/denver/:id" component={() => (<div><Header/><NannyDetail/></div>)} /> 
-            <Route path="/locations/denver" component={() => (<div><Header/><Filter nannyData={this.state.nannyData} /><Footer/></div>)} /> 
-            <Route path="/jobs" component={() => (<div><Header/><JobsForm/><Footer/></div>)} />
-            <Route path="/locations" component={() => (<div><Header/><Locations/><Footer/></div>)} />
-            <Route path="/login" component={() => (<div><Header/><Login/><Footer/></div>)} />
-            <Route path="/" component={() => (<div className="splash-container"><Header/><SplashPage/><Footer/></div>)} />
-          </Switch>
+      
+        <BrowserRouter>
+        <div className="site-content">
+          <div className="site-body">
+            <div className="app-header">
+              <Header />
+            </div>
+            <div className="main">
+              <Switch>
+                <Route path="/locations/denver/:id" component={() => (<div><NannyDetail/></div>)} /> 
+                <Route path="/locations/denver" component={() => (<div><Filter nannyData={this.state.nannyData} /></div>)} /> 
+                <Route path="/jobs" component={() => (<div><JobsForm/></div>)} />
+                <Route path="/locations" component={() => (<div><Locations/></div>)} />
+                <Route path="/login" component={() => (<div><Login/></div>)} />
+                <Route path="/" component={() => (<div><SplashPage/></div>)} />
+              </Switch>
+            </div>
+          </div>
+          <Footer className="footer"/> 
         </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      
       
     );
   }
