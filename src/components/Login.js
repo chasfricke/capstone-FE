@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Login.css';
 
 export class Login extends React.Component {
 	constructor(props, context) {
@@ -32,15 +33,17 @@ handleInputChange(event) {
    
 	render() {
 		return (
+			<div className="login-top-padding">
 			<div className="login-form">
 				<h4>Login</h4>
 					<form>
-						<div>
+						<div className="login-elements">
 							<input type="email" name="email_address" placeholder="email address" required onChange={this.handleInputChange} />
 							<input type="password" name="password"  placeholder="password" required onChange={this.handleInputChange} />
 							<button onClick={this.onLoginSubmit}>Login</button>
 						</div>
 					</form>			
+			</div>
 			</div>
 		)
 	}

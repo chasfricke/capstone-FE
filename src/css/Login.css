@@ -1,0 +1,29 @@
+.login-form {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    width: 15rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-elements {
+    display:flex;
+    flex-direction: column;
+}
+
+.login-elements input {
+    margin-bottom: 0.5rem;
+    width: 10rem;
+}
+
+.login-elements button {
+    width: 5rem;
+    align-self: center;
+}
+
