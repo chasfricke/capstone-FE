@@ -33,7 +33,7 @@ handleInputChange(event) {
    
 	render() {
 		return (
-			<div className="login-top-padding">
+			<div className="login-container">
 			<div className="login-form">
 				<h4>Login</h4>
 					<form>
