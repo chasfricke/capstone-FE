@@ -34,11 +34,7 @@ class App extends Component {
   
   
   render() {
-    if (this.state.nannyData === null) {
-			return <div>Loading...</div>
-		}
     return (
-      
         <BrowserRouter>
         <div className="site-content">
           <div className="site-body">
@@ -59,8 +55,6 @@ class App extends Component {
           <Footer className="footer"/> 
         </div>
         </BrowserRouter>
-      
-      
     );
   }
 }
