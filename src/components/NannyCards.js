@@ -49,7 +49,7 @@ export class NannyCards extends React.Component {
 
 		render() {
         return (
-          <section>
+          <section className="nanny-list">
                 <ul>
                     {this.props.nannyData.map(this.renderNannyList)}
                 </ul>

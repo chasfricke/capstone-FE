@@ -120,7 +120,7 @@ export class NannyDetail extends React.Component {
 								<hr/>
 								<p>Education: {this.state.nannyData.education}</p>
 							</div>
-							<div className="skills-list">
+							<div className="skills-list-end">
 								<h4>Car Info</h4>
 								<p>Make: {this.state.nannyData.car_make}</p>
 								<p>Model: {this.state.nannyData.car_model}</p>

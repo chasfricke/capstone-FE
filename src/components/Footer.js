@@ -12,9 +12,6 @@ export class Footer extends React.Component {
 				<div className="legal-container">
 					<small>Copyright 2018</small>
 				</div>
-				<div className="jobs-link-container">
-					<Link to="/jobs"><p className="jobs-link">JOBS</p></Link>
-				</div>
 			</div>
 		)
 	}
