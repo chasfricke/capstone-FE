@@ -16,6 +16,17 @@
     align-items: center;
 }
 
+.nanny-info-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.match-percentage {
+    padding-bottom: 0.25rem;
+}
+
 .nanny-profile-img {
     height: 10rem;
     width: 10rem;

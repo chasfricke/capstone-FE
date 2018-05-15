@@ -15,7 +15,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 class App extends Component {
   constructor(props) {
     super(props) 
-    this.state= { nannyData: null }
+    this.state = { nannyData: null }
   }
   
   componentDidMount() {
@@ -30,8 +30,6 @@ class App extends Component {
         this.setState({nannyData: nannyData})
       })
     }
-
-  
   
   render() {
     return (
