@@ -7,10 +7,11 @@ export class Locations extends React.Component {
 	render() {
 		return (
 			<div className="locations-list-container">
+				<div className="div-header">
+					<h3>CITIES</h3>
+				</div>
 				<div className="locations-list">
 					<div className="location-container">
-						<h3>CITIES</h3>
-						<hr/>
 						<h4>Colorado</h4>
 						<ul>
 							<Link to="/locations/denver"><span className="locations-link">Denver</span></Link>

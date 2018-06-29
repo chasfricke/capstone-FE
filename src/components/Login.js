@@ -34,8 +34,10 @@ handleInputChange(event) {
 	render() {
 		return (
 			<div className="login-container">
-			<div className="login-form">
-				<h4>Login</h4>
+				<div className="login-header">
+					<h3>LOGIN</h3>
+				</div>
+				<div className="login-form">
 					<form>
 						<div className="login-elements">
 							<input type="email" name="email_address" placeholder="email address" required onChange={this.handleInputChange} />
@@ -43,7 +45,7 @@ handleInputChange(event) {
 							<button onClick={this.onLoginSubmit}>Login</button>
 						</div>
 					</form>			
-			</div>
+				</div>
 			</div>
 		)
 	}

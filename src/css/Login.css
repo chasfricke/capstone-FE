@@ -1,15 +1,25 @@
-.login-form {
-    background-color: rgba(255, 255, 255, 0.98);
-    padding: 1rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    width: 15rem;
-    margin: auto;
+.login-container{
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+.login-form {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);    
+    padding: 1rem;
+
+}
+
+.login-header {
+    background: black;
+    color: white;
+   width: 10.5rem;
+    padding: 1rem;
+    border-radius: 6px 6px 0 0;
 }
 
 .login-elements {
@@ -27,6 +37,3 @@
     align-self: center;
 }
 
-.login-container {
-    padding-top: 2rem;
-}

@@ -54,9 +54,12 @@ export class JobsForm extends React.Component {
 	render() {
 		return (
 		<div className="job-form-padding">
+		<div className="application-header">
+			<h3>NANNY APPLICATION</h3>
+		</div>
 		<div className="job-form-container">
+		
 		<h3 className="submit-success">{this.state.submit}</h3>
-		<h3>NANNY APPLICATION</h3>
 		<form className="job-form" onSubmit={this.submitHandler}>
 			<div className="form-section">	
 				<h4>Login</h4>

@@ -4,13 +4,12 @@
 
 .nannies-title {
     padding: 1rem;
-    background-color:rgba(255, 255, 255, 0.98);
-    border-radius: 6px;
+    background-color: black;
+    color: white;
+    border-radius: 6px 6px 0 0;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
     margin-left: 2rem;
-    margin-right: 1.5rem;
-    color: rgb(45, 45, 45);
-    display: inline-block;
+    margin-right: 2rem;
 }
 
 .filter-list-container {
@@ -21,7 +20,7 @@
 .filter-container {
     background-color: rgba(255, 255, 255, 0.98);
     margin-left: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.25rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     height: 50vh;

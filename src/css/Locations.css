@@ -1,18 +1,29 @@
 .locations-list-container{
     padding-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .locations-list {
     background-color:rgba(255, 255, 255, 0.98);
-    border-radius: 6px;
+    border-radius: 0 0 6px 6px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    margin-left: 2rem;
-    margin-right: 2rem;
+    
     color: rgb(45, 45, 45);   
 }
 
 .location-container {
     padding: 1rem;
+}
+
+.div-header {
+    background-color: black;
+    padding: 1rem;
+    border-radius: 6px 6px 0 0;
+}
+
+.div-header h3 {
+    color: white;
 }
 
 .locations-list li{
