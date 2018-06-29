@@ -39,8 +39,12 @@ export class NannyCards extends React.Component {
                         </header>
                         <section className="nanny-info">
                             <div className="nanny-info-header">
-                                <h4 className="nanny-name">{item.first_name + " " + item.last_name}</h4>
-                                <p className="match-percentage">{matchPercentage}% Match</p>
+                                <div>
+                                    <h4 className="nanny-name">{item.first_name + " " + item.last_name}</h4>
+                                </div>
+                                <div>
+                                    <p className="match-percentage">{matchPercentage}% Match</p>
+                                </div>
                             </div>
                             <div className="nanny-description">
                                 <p>{item.city + ", " + item.state}</p>

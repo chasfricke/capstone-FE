@@ -19,8 +19,12 @@
 .nanny-info-header {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: space-between;
+}
+
+.nanny-info-header h4 {
+    color: rgb(45, 45, 45);
+    margin-right: 2rem;
 }
 
 .match-percentage {
@@ -47,9 +51,7 @@
     color: rgb(45, 45, 45);
 }
 
-.nanny-info-header h4 {
-    color: rgb(45, 45, 45);
-}
+
 
 .nanny-list {
     padding-top: 0.25rem;
