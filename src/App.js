@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Header } from './components/Header';
+import { NavBar } from './components/NavBar';
 import { Footer } from './components/Footer';
 import { Filter } from './components/Filter';
 import { SplashPage } from './components/SplashPage';
 import { Locations } from './components/Locations';
 import { JobsForm } from './components/Jobs';
 import { NannyDetail } from './components/NannyDetail';
-import { Login } from './components/Login';
+import { LoginCard } from './components/LoginCard';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -37,21 +37,19 @@ class App extends Component {
         <div className="site-content">
           <div className="site-background">
             <div className="site-body">
-              <div className="app-header">
-                <Header />
-              </div>
+              <NavBar />
               <div className="main">
                 <Switch>
                   <Route path="/locations/denver/:id" component={() => (<div><NannyDetail/></div>)} /> 
                   <Route path="/locations/denver" component={() => (<div><Filter nannyData={this.state.nannyData} /></div>)} /> 
                   <Route path="/jobs" component={() => (<div><JobsForm/></div>)} />
                   <Route path="/locations" component={() => (<div><Locations/></div>)} />
-                  <Route path="/login" component={() => (<div><Login/></div>)} />
-                  <Route path="/" component={() => (<div><SplashPage/></div>)} />
+                  <Route path="/login" component={() => (<div><LoginCard/></div>)} />
+                  <Route path="/" component={() => (<div className="container text-center"><SplashPage/></div>)} />
                 </Switch>
               </div>
             </div>
-            <Footer className="footer"/> 
+            <Footer /> 
           </div>
         </div>
         </BrowserRouter>

@@ -1,0 +1,13 @@
+.card-header {
+    background: black;
+    color: white;
+}
+
+
+.card {
+    border: 0px;
+}
+
+.button-container {
+    text-align: center;
+}

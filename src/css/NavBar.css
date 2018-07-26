@@ -1,0 +1,34 @@
+.navbar-background {
+    background-color: black;
+}
+
+a:link {
+    text-decoration: none;
+} 
+
+.header-link {
+    border-radius: 3px 3px 3px 3px;
+    color:white;
+    padding: 0.2rem;
+    padding-top: 0.25rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.header-link:hover {
+    color: black;
+    background-color: white;
+}
+
+.logo {
+    color: white;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.logo:hover {
+    background-color: white;
+    color: black;
+}

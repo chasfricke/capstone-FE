@@ -1,34 +1,5 @@
-.footer-container {
-    background: black;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
+.footer {
     height: 3rem;
-
-    border-radius: 10px 10px 0px 0px;
-}
-
-.legal-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.jobs-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: black;
     color: white;
-    padding: 0.2rem;
-    border-radius: 3px 3px 3px 3px;
-}
-
-.jobs-link:hover {
-    color: black;
-    background-color: white;
 }

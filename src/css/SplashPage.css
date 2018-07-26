@@ -1,13 +1,5 @@
-.splash-page-container {
-    background-size: 100vw auto; 
-    height: 86vh;
-}
-
-.splash-page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.tagline-container {
+margin-top: calc(33vh - 6rem);
     
 }
 

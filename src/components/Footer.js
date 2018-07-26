@@ -7,11 +7,11 @@ export class Footer extends React.Component {
    
 	render() {
 		return (
-			<div className="footer-container">
-				<div className="legal-container">
+			<footer>
+				<nav className="navbar footer">
 					<small>Copyright 2018</small>
-				</div>
-			</div>
+				</nav>
+			</footer>
 		)
 	}
     
