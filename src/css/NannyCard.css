@@ -1,8 +1,9 @@
 .nanny-card-container {
     border-radius: 6px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    width: calc(100vw - 17.5rem);
-    margin-left: 1rem;
+    
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-bottom: 0.5rem;
     display: flex;
     flex-direction: row;

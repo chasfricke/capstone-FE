@@ -1,6 +1,3 @@
-.filter-title-nannies-container {
-    padding-top: 2rem;
-}
 
 .nannies-title {
     padding: 1rem;
@@ -10,25 +7,27 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
     margin-left: 2rem;
     margin-right: 2rem;
+    margin-top: 1rem;
 }
 
-.filter-list-container {
-    display: flex;
-    flex-direction: row;
+.filters-fieldset {
+    border-right: 1px solid lightgray;
+    padding-right: 1rem;
+  
 }
 
 .filter-container {
     background-color: rgba(255, 255, 255, 0.98);
     margin-left: 2rem;
-    margin-top: 0.25rem;
+    margin-right: 2rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    height: 50vh;
-    border-radius: 6px;
+    border-radius: 0 0 6px 6px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    display: inline-block;
     padding: 0.75rem;
     color: rgb(45, 45, 45);
+    display: flex;
+    flex-direction: row;
 }
 
 .filter-container h3 {
@@ -42,23 +41,16 @@
     padding-top: .5rem; 
 }
 
-.show-all-checkbox {
-    margin-left: 1rem;
-}
-
-.line_1 {
-    border: 0;
-    height: 1px;
-    background: #333;
-    width: 90%;
-    margin-top: 0.5rem;
-}
-
-.filter-title-container {
+.checkbox-label-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    padding: 0.2rem;
 }
+
+.checkbox-label-container label {
+    margin-left: 0.5rem;
+}
+
 
 fieldset {
     margin-left: 1rem;
@@ -68,15 +60,4 @@ legend {
     font-family: Raleway-Medium;
     padding-bottom: 0.25rem;
     padding-top: 0.5rem;
-}
-.filter-container input {
-    margin-left: 1rem;
-}
-
-.line_2 {
-    border: 0;
-    height: 1px;
-    background: lightgrey;
-    width: 90%;
-    margin-top: 0;
 }
