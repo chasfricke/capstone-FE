@@ -23,13 +23,12 @@ export class Filter extends React.Component {
 	}
 
 	render() {
-
 		return (
 			<div>
-				<h3 className="nannies-title">DENVER NANNIES</h3>
-				<div className="filter-list-container">
-					<div className="filter-container">
-						<fieldset className="filters-fieldset">
+				<div className="container">
+				<h3 className="nannies-title row">DENVER NANNIES</h3>
+					<div className="filter-container row">
+						<fieldset className="filter-background col-md-auto">
 							<div>
 								<h4>FILTERS</h4>
 							</div>
@@ -38,18 +37,7 @@ export class Filter extends React.Component {
 								<label>Show All</label>
 							</div>
 						</fieldset>
-						<fieldset>
-							<legend>Water Sports</legend>
-							<div className="checkbox-label-container">
-								<input type="checkbox" id="surfing" name="surfing" checked={this.state.surfing} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
-								<label>Surfing</label>
-							</div>
-							<div className="checkbox-label-container">
-								<input type="checkbox" id="kayaking" name="kayaking" checked={this.state.kayaking} onChange={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.kayaking}/>
-								<label>Kayaking</label>
-							</div>
-						</fieldset>
-						<fieldset>
+						<fieldset className="col-md-auto">
 						<legend>Mountain Sports</legend>
 							<div className="checkbox-label-container">
 								<input type="checkbox" id="snowboarding" name="snowboarding" checked={this.state.snowboarding} onChange={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.snowboarding}/>
@@ -72,14 +60,25 @@ export class Filter extends React.Component {
 								<label>Hiking</label>
 							</div>
 						</fieldset>
-						<fieldset>
+						<fieldset className="col-md-auto">
+							<legend>Water Sports</legend>
+							<div className="checkbox-label-container">
+								<input type="checkbox" id="surfing" name="surfing" checked={this.state.surfing} onChange={event => this.onInputChange(event.target.value, event.target.name)} />
+								<label>Surfing</label>
+							</div>
+							<div className="checkbox-label-container">
+								<input type="checkbox" id="kayaking" name="kayaking" checked={this.state.kayaking} onChange={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.kayaking}/>
+								<label>Kayaking</label>
+							</div>
+						</fieldset>
+						<fieldset className="col-md-auto">
 							<legend>Other Sports</legend>
 							<div className="checkbox-label-container">
 								<input type="checkbox" id="skateboarding" name="skateboarding" checked={this.state.skateboarding} onChange={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.skateboarding}/>
 								<label>Skateboarding</label>
 							</div>
 						</fieldset>
-						<fieldset>
+						<fieldset className="col-md-auto">
 							<legend>Certifications</legend>
 							<div className="checkbox-label-container">
 								<input type="checkbox" id="first_aid" name="first_aid" checked={this.state.first_aid} onChange={event => this.onInputChange(event.target.value, event.target.name)} value={this.state.first_aid}/>
@@ -95,8 +94,9 @@ export class Filter extends React.Component {
 							</div>
 						</fieldset>
 					</div>
-				<NannyCards filtersSelected={this.state} nannyData={this.props.nannyData} />
+					
 				</div>
+				<NannyCards filtersSelected={this.state} nannyData={this.props.nannyData} />
 			</div>
 		)
 	}

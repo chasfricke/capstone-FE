@@ -1,68 +1,29 @@
-.nanny-card-container {
-    border-radius: 6px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(255, 255, 255, 0.98);
-    color: rgb(45, 45, 45);
-}
-
-.nanny-card-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nanny-info-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.nanny-info-header h4 {
-    color: rgb(45, 45, 45);
-    margin-right: 2rem;
-}
 
 .match-percentage {
     padding: 0.5rem;
     background-color: black;
     color: white;
-    border-radius: 0 6px 0 6px;
-}
-
-.nanny-profile-img {
-    height: 10rem;
-    width: 10rem;
-    border-radius: 6px 0 0 6px;
-}
-
-.nanny-info {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding: 0 0 0 0.75rem;
-}
-
-.nanny-card-container h4 {
-    color: rgb(45, 45, 45);
+    border-radius: 4px 4px 0 0;
+    margin: 0;
 }
 
 
-
-.nanny-list {
-    padding-top: 0.25rem;
+.profile-pic {
+    height: auto;
+    width: 100%;
 }
 
-.nanny-name {
-    padding-top: .5rem;
+.card-container {
+    padding: 0.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.nanny-description {
-    padding-right: 0.75rem;
+.card-img-overlay {
+    padding: 0;
 }
 
+.card-body p{
+    text-decoration: none;
+    color: black;
+}

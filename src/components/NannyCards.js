@@ -31,33 +31,32 @@ export class NannyCards extends React.Component {
         
         if (filterMatches > 0) { 
             return (
-                <Link key={item.id} to={`/locations/denver/${item.id}`}>
-                <li key={item.id} onClick={() => this.handleClick(item)}>
-                    <div className="nanny-card-container">
-                        <header className="nanny-card-header">
-                            <img className="nanny-profile-img" src={item.photo_url} alt="profile" />
-                        </header>
-                        <section className="nanny-info">
-                            <div className="nanny-info-header">
-                                <div>
-                                    <h4 className="nanny-name">{item.first_name + " " + item.last_name}</h4>
-                                </div>
-                                <div>
-                                    <p className="match-percentage">{matchPercentage}% Match</p>
-                                </div>
-                            </div>
-                            <div className="nanny-description">
-                                <p>{item.city + ", " + item.state}</p>
-                                <br/>
-                                <p>{item.background}</p>
-                                <br/> 
-                                <p className="hourly-rate">Hourly Rate: ${item.hourly_rate}</p> 
-                            </div>
-                            
-                        </section>    
+                <div className="card-container col-12 col-sm-6 col-md-4 col-lg-3">
+                
+                <Link to={`/locations/denver/${item.id}`}>
+                <div className="card">
+                    <div key={item.id} onClick={() => this.handleClick(item)}>
+                        <p className="match-percentage text-right">{matchPercentage}% Match</p> 
+
+                        <img className="profile-pic" src={item.photo_url} alt="profile" />
+                        
+                        
+                        <div className="card-body">
+                            <h4 className="card-title">{item.first_name + " " + item.last_name}</h4>
+                            <p>{item.city + ", " + item.state}</p>
+                            <br/>
+                            <p>{item.background}</p>
+                            <br/> 
+                            <p className="hourly-rate">Hourly Rate: ${item.hourly_rate}</p> 
+                        </div>    
+                        
                     </div>
-                </li>
+                    </div>
                 </Link>
+                
+                </div>
+                
+                
             )
         }   
     }
@@ -68,11 +67,12 @@ export class NannyCards extends React.Component {
 
 		render() {
         return (
-          <section className="nanny-list">
-                <ul>
+            <section className="container">
+                <div className="row">
                     {this.props.nannyData.map(this.renderNannyList)}
-                </ul>
-          </section>
+                </div>
+                
+            </section>
         )
     }
     
