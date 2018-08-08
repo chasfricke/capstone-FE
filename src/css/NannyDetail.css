@@ -106,21 +106,6 @@
     align-items: center;
 }
 
-.email-form-container {
-    padding-bottom: 2rem;
-}
-.nanny-email-form {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    width: calc(100vw - 6rem);
-
-    border-radius: 6px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-    margin-left: 1rem;
-    background-color: rgba(255, 255, 255, 0.98);
-    color: rgb(45, 45, 45);
-}
-
 .nanny-email-input-container {
     display: flex;
     flex-direction: column;

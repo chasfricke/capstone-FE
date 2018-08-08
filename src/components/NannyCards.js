@@ -5,18 +5,16 @@ import '../css/NannyCard.css'
 export class NannyCards extends React.Component {
     constructor(props) {
         super(props) 
+        this.state=""
         
         this.renderNannyList = this.renderNannyList.bind(this);    
     }
 
-    
-    renderNannyList(item){
-       
+    renderNannyList(item){ 
         var filterMatches = 0;
         var filterNonMatches = 0;
         var matchPercentage = 0; 
         var skillArray = ["surfing", "kayaking", "snowboarding", "mountain_biking", "hiking", "rock_climbing", "skateboarding", "skiing", "first_aid", "cpr", "lifeguard"];
-
         skillArray.forEach((element) => {
             if (this.props.filtersSelected[element] && item[element] === true) {
                 filterMatches += 1;
@@ -26,13 +24,10 @@ export class NannyCards extends React.Component {
                 }
             }
         })
-        
         matchPercentage = Math.round(filterMatches / (filterMatches + filterNonMatches) * 100)
-        
         if (filterMatches > 0) { 
             return (
                 <div className="card-container col-12 col-sm-6 col-md-4 col-lg-3">
-                
                 <Link to={`/locations/denver/${item.id}`}>
                 <div className="card">
                     <div key={item.id} onClick={() => this.handleClick(item)}>
@@ -53,29 +48,25 @@ export class NannyCards extends React.Component {
                     </div>
                     </div>
                 </Link>
-                
                 </div>
-                
-                
             )
         }   
     }
-		handleClick = (item) => {
-        this.setState({item});
-        window.scroll(0,0);
-		}   
+    
+    handleClick = (item) => {
+    this.setState({item});
+    window.scroll(0,0);
+    }   
 
-		render() {
+	render() {
         return (
             <section className="container">
                 <div className="row">
                     {this.props.nannyData.map(this.renderNannyList)}
                 </div>
-                
             </section>
         )
     }
-    
 }
 
 

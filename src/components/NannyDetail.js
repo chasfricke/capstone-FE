@@ -23,9 +23,7 @@ export class NannyDetail extends React.Component {
 		return fetch(`https://gnarly-nannies.herokuapp.com/nanny_account_info/${id}`)
 		  .then(response => response.json())
 		  .then(data => {
-			// this.setState(data.nanny_account_info)})
 			this.setState({nannyData: data.nanny_account_info})})
-			// this.setState({nannyData: nannyData})
 	}
 
 	renderSports = () => {
@@ -89,85 +87,93 @@ export class NannyDetail extends React.Component {
 			return <div>Loading...</div>
 		}
 		return (
-			<div className="detail-form-container">
-			<div className="detail-container">
-				<Link to="/locations/denver" >
-					<button className="back-button">Back</button>
-				</Link>
-				<h4 className="submit-success">{this.state.submit}</h4>
-				<div className="nanny-detail-main">
-					<img className="nanny-detail-img" src={this.state.nannyData.photo_url} alt="profile img"/>
-					<div className="basic-info-container">
-						<div className="basic-info">
-							<div>
-								<h4>{this.state.nannyData.first_name + " " + this.state.nannyData.last_name}</h4>
-								<p>{this.state.nannyData.city}, {this.state.nannyData.state}</p>
-								<p>Hourly Rate: ${this.state.nannyData.hourly_rate}</p>
-								<p>Experience: {this.state.nannyData.years_experience} years</p>
-							</div>
-							<div className="skills-list">
-								<h4>Trips Offered</h4>
-								<ul>
-									{this.renderSports()}
-								</ul>
-							</div>
-							<div className="skills-list">
-								<h4>Training</h4>
-								<ul>
-									{this.renderSkills()}
-								</ul>
-								<div className="other-certs-container">{this.renderOtherCerts()}</div>
-								<hr/>
-								<p>Education: {this.state.nannyData.education}</p>
-							</div>
-							<div className="skills-list-end">
-								<h4>Car Info</h4>
-								<p>Make: {this.state.nannyData.car_make}</p>
-								<p>Model: {this.state.nannyData.car_model}</p>
-								<p>Year: {this.state.nannyData.car_year}</p>
+			<div className="container">
+				<div className="row">
+					<div className="card">
+						<Link to="/locations/denver" >
+							<button className="back-button">Back</button>
+						</Link>
+						<h4 className="submit-success">{this.state.submit}</h4>
+						<div className="nanny-detail-main">
+							<img className="nanny-detail-img" src={this.state.nannyData.photo_url} alt="profile img"/>
+							<div className="basic-info-container">
+								<div className="basic-info">
+									<div>
+										<h4>{this.state.nannyData.first_name + " " + this.state.nannyData.last_name}</h4>
+										<p>{this.state.nannyData.city}, {this.state.nannyData.state}</p>
+										<p>Hourly Rate: ${this.state.nannyData.hourly_rate}</p>
+										<p>Experience: {this.state.nannyData.years_experience} years</p>
+									</div>
+									<div className="skills-list">
+										<h4>Trips Offered</h4>
+										<ul>
+											{this.renderSports()}
+										</ul>
+									</div>
+									<div className="skills-list">
+										<h4>Training</h4>
+										<ul>
+											{this.renderSkills()}
+										</ul>
+										<div className="other-certs-container">{this.renderOtherCerts()}</div>
+										<hr/>
+										<p>Education: {this.state.nannyData.education}</p>
+									</div>
+									<div className="skills-list-end">
+										<h4>Car Info</h4>
+										<p>Make: {this.state.nannyData.car_make}</p>
+										<p>Model: {this.state.nannyData.car_model}</p>
+										<p>Year: {this.state.nannyData.car_year}</p>
+									</div>
+								</div>
+								<div className="background">
+									<h4>About Me</h4>
+									<p>{this.state.nannyData.background}</p>
+								</div>
 							</div>
 						</div>
-						<div className="background">
-							<h4>About Me</h4>
-							<p>{this.state.nannyData.background}</p>
+						<button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+							Email {this.state.nannyData.first_name}
+						</button>
+						<div className="collapse" id="collapseExample">
+							<div className="card-body">
+								<form onSubmit={this.handleSubmit}>
+									<h4>Email {this.state.nannyData.first_name}</h4>
+									<div className = "card">
+										<label>Your Name</label>
+										<input
+											type="text"
+											name="user_name"
+											onChange={this.handleChange} />
+									</div>
+									<div className = "nanny-email-input-container">
+										<label>Your Email</label>
+										<input
+											type="email"
+											name="user_email"
+											onChange={this.handleChange} />
+									</div>
+									<div className = "nanny-email-input-container">
+										<label>Subject Line</label>
+										<input
+											type="text"
+											name="user_subject"
+											onChange={this.handleChange} />
+									</div>
+									<div className = "nanny-email-input-container">
+										<label>Message</label>
+										<textarea
+											name="user_message"
+											onChange={this.handleChange} />
+									</div>
+									<button className="email-submit-button">Send</button>
+								</form>
+							</div>
 						</div>
-					</div>
+					</div>	
 				</div>
-			</div>
-			
-			{/* Email Form */}
 			<div>
-			<form onSubmit={this.handleSubmit} className="nanny-email-form">
-			<h4>Email {this.state.nannyData.first_name}</h4>
-				<div className = "nanny-email-input-container">
-					<label>Your Name</label>
-					<input
-						type="text"
-						name="user_name"
-						onChange={this.handleChange} />
-				</div>
-				<div className = "nanny-email-input-container">
-					<label>Your Email</label>
-					<input
-						type="email"
-						name="user_email"
-						onChange={this.handleChange} />
-				</div>
-				<div className = "nanny-email-input-container">
-					<label>Subject Line</label>
-					<input
-						type="text"
-						name="user_subject"
-						onChange={this.handleChange} />
-				</div>
-				<div className = "nanny-email-input-container">
-					<label>Message</label>
-					<textarea
-						name="user_message"
-						onChange={this.handleChange} />
-				</div>
-				<button className="email-submit-button">Send</button>
-			</form>
+			
 			</div>
 			</div>
 			
